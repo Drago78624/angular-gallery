@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myGallery">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div ng-controller="galleryController">
+      <input
+        type="checkbox"
+        ng-model="a"
+        id="animal"
+        style="width: 20px; height: 20px; accent-color: red"
+      />
+      <label
+        for="animal"
+        style="
+          font-size: 1.5rem;
+          text-transform: capitalize;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          margin-right: 2rem;
+        "
+        >animals</label
+      >
+      <input
+        type="checkbox"
+        ng-model="b"
+        id="birds"
+        style="width: 20px; height: 20px; accent-color: red"
+      />
+      <label
+        for="birds"
+        style="
+          font-size: 1.5rem;
+          text-transform: capitalize;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          margin-right: 2rem;
+        "
+        >birds</label
+      >
+      <input
+        type="checkbox"
+        ng-model="c"
+        id="people"
+        style="width: 20px; height: 20px; accent-color: red"
+      />
+      <label
+        for="people"
+        style="
+          font-size: 1.5rem;
+          text-transform: capitalize;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          margin-right: 2rem;
+        "
+        >people</label
+      >
+      <br /><br />
+      <div style="margin: 0 auto; max-width: 1600px;">
+        <img
+          ng-src="{{ url }}"
+          alt=""
+          ng-repeat="url in animals"
+          ng-show="a"
+          style="
+            width: 350px;
+            height: 250px;
+            margin: 1rem;
+            border-radius: 5px;
+            border: 2px solid black;
+          "
+        />
+        <img
+          ng-src="{{ url }}"
+          alt=""
+          ng-repeat="url in birds"
+          ng-show="b"
+          style="
+            width: 350px;
+            height: 250px;
+            margin: 1rem;
+            border-radius: 5px;
+            border: 2px solid black;
+          "
+        />
+        <img
+          ng-src="{{ url }}"
+          alt=""
+          ng-repeat="url in people"
+          ng-show="c"
+          style="
+            width: 350px;
+            height: 250px;
+            margin: 1rem;
+            border-radius: 5px;
+            border: 2px solid black;
+          "
+        />
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
